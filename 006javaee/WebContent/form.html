@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Java Web</title>
+	<script language="JavaScipt">
+	function checkvalid(){
+        var str1=login.name.value;  
+		var str2=login.pwd.value;
+		var str3=login.sex.value;
+        var str4=login.pwd.value;
+		var str5=login.pwd2.value;
+		if(str1=="")
+		{
+			alert("没有输入用户名");
+			return false;
+		}
+			
+		if(str2=="")
+		{
+			alert("没有输入密码");
+			return false;
+		}
+		if(str3=="")
+		{
+			alert("没有输入性别");
+			return false;
+		}
+		if(str4!=str5)
+		{
+			alert("密码不匹配");
+			return false;
+		}
+        }
+        </script>
+   </head>
+   <body>
+      <form method="post" action="ex006.jsp" name="login">
+         <div align="center"> name(必须输入项 ):
+           <input type="text" name="name">
+           <br>
+         password(必须输入项): 
+         <input type="password" name="pwd">
+         <br>
+	password(请重新输入):
+	<input type="password" name="pwd2">
+	<br>
+	phonenumber(选择输入项): 
+           <input type="text" name="number">
+           <br>		
+	     </div>
+        <p align="center">性别(必须输入项):
+  	<input Type="Radio" Name="sex" Value="男" Checked>男 
+  	<input Type="Radio" Name="sex" Value="女">女  	</p>  	
+        <p align="center">户口所在城市</p> 
+        <p align="center"><select name="City" >
+        <option selected>北京市</option>
+        <option>上海市</option>
+        <option>天津市</option>
+        <option>重庆市</option>
+        </select></p>
+        <p align="center">曾经居住地</p>
+	<p align="center"><select name="juzhu" multiple >
+        <option>北京市</option>
+        <option>上海市</option>
+        <option>天津市</option>
+        <option>重庆市</option>
+        </select></p>
+	<p align="center">爱好:</p>
+   	<div align="center">
+   	  <input type="checkbox" name="JOB" value="旅游" >
+   	  旅游<br>
+   	  <input type="checkbox" name="JOB" value="上网" >
+   	  上网<br>
+   	  <input type="checkbox" name="JOB" value="游戏">
+   	  游戏<br>
+   	   <input type="checkbox" name="JOB" value="电影">
+   	  电影<br>
+      <input type="checkbox" name="JOB" value="看书">
+      看书<br>
+      <input type="checkbox" name="JOB" value="音乐">
+      音乐<br>
+      <input type="checkbox" name="JOB" value="其他">
+      其他<br>
+      其他爱好: <input type="text" name="aihao">
+           <br>		
+ 	</div>
+   	<p align="center">用户备注信息:</p>
+    	<p align="center"><textarea name="liuyan" rows="10" cols="30"></textarea></p>
+         <div align="center">
+           <input type="reset" name="reset" value="重置">
+           <input type="submit" name="submit" onClick="return checkvalid()" value="提交">         
+            </div>
+      </form>
+   </body>
+</html>
